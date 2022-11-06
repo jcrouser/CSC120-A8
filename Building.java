@@ -5,7 +5,7 @@ public class Building {
     protected String name;
     protected String address;
     protected int nFloors;
-    private int activeFloor = -1; // Default value indicating we are not inside this building
+    protected int activeFloor = -1; // Default value indicating we are not inside this building
 
     /* Default constructor */
     public Building() {
@@ -61,6 +61,7 @@ public class Building {
             throw new RuntimeException("You have fallen out a window from floor #" +this.activeFloor + "!");
         }
         System.out.println("You have left " + this.name + ".");
+        this.activeFloor = -1; // We're leaving the building, so we no longer have a valid active floor
         return null; // We're outside now, so the building is null
     }
 
