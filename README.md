@@ -17,13 +17,17 @@ On top of its previous functionality, our `Building` class now has several usefu
 First things first: replace the original `Building` class from [A6: Use What Your Parent (Class) Gave You](https://github.com/jcrouser/CSC120-A6) with the expanded version contained in this repo, and make sure that your implementations of `House.java`, `Library.java`, and `Cafe.java` still work as expected.
 
 ## Phase 1: Overriding Methods
-The `Building` class provides a lot of useful functionality, but some of it doesn't quite work for all three of our `Building` subclasses. This isn't a problem: we'll just **override** them!  _Hint: use `super` whenever possible to avoid duplicating code!_
+The `Building` class provides a lot of useful functionality, but some of it doesn't quite work for all three of our `Building` subclasses. This isn't a problem: we'll just **override** them!  
+
+_Hint: use `super` whenever possible to avoid duplicating code!_
 
 ### `showOptions()`
 Since each of the three subclasses have additional options, start by overriding the `showOptions()` method to reflect the subclass-specific options for `House`, `Library`, and `Cafe`.
 
 ### `goToFloor(int n)`
-Most `Library` buildings (and some `House`s as well) have elevators, which means it is possible to move between non-adjacent floors in a single action. Override the `goToFloor(int n)` method to reflect this. _Hint: you may want to add a `boolean` attribute to elevator-friendly classes to indicate whether or not the building has an elevator, and use this in determining whether or not a call to `goToFloor(...)` is valid._
+Most `Library` buildings (and some `House`s as well) have elevators, which means it is possible to move between non-adjacent floors in a single action. Override the `goToFloor(int n)` method to reflect this. 
+
+_Hint: you may want to add a `boolean` attribute to elevator-friendly classes to indicate whether or not the building has an elevator, and use this in determining whether or not a call to `goToFloor(...)` is valid._
 
 
 ## Phase 2: Overloading Methods
@@ -34,7 +38,7 @@ We'll use the `CampusMap` class to **aggregate** many different `Building`s toge
 
 <img src="https://cdn-icons-png.flaticon.com/512/2204/2204714.png" alt="Map icon created by Freepik - Flaticon" width="200"/>
 
-Expanding on the example in `CampusMap.main(...)`, add at least 10 more of your favorite Smith College buildings.
+Expanding on the example in `CampusMap.main(...)`, add at least 10 more of your favorite Smith College buildings, and demonstrate the use of each of your overloaded methods.
 
 ## Kudos (OPTIONAL)
 Want to test your programming chops out on a stretch goal that will help prepare you for your final project? See if you can make your map **interactive** by implementing a `loop` that enables the user to explore various buildings and make use of their various methods (e.g. moving into a `House`, checking out a book at the `Library` or buying a cup of coffee at the `Cafe`).
